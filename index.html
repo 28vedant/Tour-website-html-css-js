@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="2.png" type="image/x-icon">
+
+    <title>Home Page</title>
+    
+</head>
+
+
+<body>
+
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="2.png" alt = "logo" width="150px" height="150px">
+            </div>
+            <div class ="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+              
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="welcome">
+            <h1>Welcome to Travel - X</h1>
+            <p>Explore our services and discover amazing experiences.</p>
+           
+        </div>
+        <div class="Book">
+            <a href="register.html">
+                <button>Book Your Trip</button>
+            </a>
+
+        </div>
+    </main>
+    <section class="section1" id="tours">
+        <div class="container">
+            <h2> Paris </h2>
+            <p >
+                Explore Paris with Our Guided Tours
+                Embark on a mesmerizing journey through the heart of Paris with our expert-guided tours. 
+                Discover iconic landmarks, indulge in exquisite cuisine, and immerse yourself in the city's rich history and culture.
+                Whether you're passionate about art, history, or gourmet delights, our tailored tours ensure an unforgettable experience.
+            </p>
+            
+        </div>
+        <div class = "image">
+            <img src="paris.jpg" alt="paris" >
+        </div>
+    </section>
+    <section class="section2" id="tours">
+        <div class="container2">
+            <h2 > Egypt </h2>
+            <p >
+                Explore Egypt with Our Guided Tours
+                Embark on a captivating journey through the wonders of Egypt with our expert-guided tours. 
+                Discover ancient monuments, experience vibrant culture, and savor local delicacies.
+                Whether you're fascinated by archaeology, mythology, or the beauty of the Nile, our tailored tours guarantee an unforgettable adventure.
+            </p>
+        </div>
+        <div class="image">
+            <img src="egypt.jpg" alt="egypt">
+        </div>
+    </section>
+    <section class="section3" id="tours">
+        <div class="container3">
+            <div >
+                <h2 > Dubai </h2>
+                <p >
+                    Explore the dazzling city of Dubai with our guided tours. 
+                    Immerse yourself in the futuristic skyline, experience luxury like never before, and discover the unique blend of tradition and modernity.
+                    Whether you're interested in shopping, desert adventures, or world-class entertainment, our tailored tours promise an extraordinary experience.
+                </p>
+            </div>
+        </div>
+        
+        <div class="image">
+            <img src="dubai.jpg" alt="dubai">
+        </div>
+    </section>
+    <section class="about-section" id ="about">
+        <div class="container-about">
+            <h2 id = abouth1>About Us</h2>
+            <p id = abouth2>
+                At Travel-X, we're not just a travel company; we're your companions on the journey of a lifetime. 
+                Our mission is to curate exceptional travel experiences that go beyond the ordinary.
+                Whether you're seeking adventure, relaxation, or cultural immersion, Travel-X is your gateway to the world's most incredible destinations.
+                Our team of passionate travelers and experts ensures that every trip with Travel-X is seamlessly planned, allowing you to focus on creating lasting memories.
+            </p>
+            <div class="about-img">
+            <img src="2.png" alt="About Us Image">
+        </div>
+        </div>
+    </section>
+    
+
+
+    <section class="contact-section" id="contact">
+        <div class="container1">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to start planning your next adventure? Get in touch with us!</p>
+
+            <div class="contact-form">
+                <form id="contact" onsubmit="submitForm(); return false;">
+
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message"  required></textarea>
+
+                    <button class="submit" type="submit"  >Submit</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                <p>123 Travel-X, Borivali, Mumbai</p>
+
+                <h3>Email Us</h3>
+                <p>info@travel-x.com</p>
+
+                <h3>Call Us</h3>
+                <p>+1 (123) 456-7890</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+ <script>
+       function submitForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+            alert("Please fill out all fields.");
+        } else {
+            alert("Thank you, " + name + "! Our team will contact you as soon as possible.");
+
+            document.getElementById("contact").reset(); 
+        }
+    }
+    function book(){
+        alert("login successfully! now you can proceed for booking")
+                window.location.href="register.html"
+    }
+          
+// <!-- <div id="preloader">
+//     <div id="loader">
+//         <img src="2.png" alt = "logo" width="500px" height="450px">
+//         <h1 style="color: white;text-align: center;font-family: 'Times New Roman', Times, serif;font-size: 100px;">Travel-X</h1>
+//     </div>
+// </div> -->
+   
+// document.addEventListener("DOMContentLoaded", function() {
+            
+//             setTimeout(function() {
+//                 document.body.classList.add("loaded");
+//             }, 4000);
+//         });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="2.png" type="image/x-icon">
+   
+
+    <title>Book Your Trip</title>
+    <style>
+       
+        body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url(regbg.jpg); 
+    
+    margin: 0;
+    padding: 0;
+}
+
+header {
+   
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section {
+    margin: 100px;
+    text-align: center;
+    letter-spacing: 3px;
+    
+
+}
+
+.tour-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: rgb(243, 219, 219);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s linear;
+}
+
+.tour-item:hover {
+    transform: scale(1.05);
+}
+
+.tour-item img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tour-item h2 {
+    color: #333;
+    font-size: 50px;
+}
+
+.tour-item p {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Book Your Trip</h1>
+</header>
+
+<section class="tour-item" id="paris"onclick="bookingConfirmation('paris')">
+    <h2>Paris</h2>
+    <img src="paris.jpg" alt="Paris">
+    <p>Explore the beauty of Paris with our expert-guided tours.</p>
+    <p>Trip Duration: 5 days</p>
+    <p>Price: $1000</p>
+</section>
+
+<section class="tour-item" id="egypt " onclick="bookingConfirmation('egypt')">
+    <h2>Egypt</h2>
+    <img src="egypt.jpg" alt="Egypt">
+    <p>Discover ancient wonders in Egypt with our expert-guided tours.</p>
+    <p>Trip Duration: 7 days</p>
+    <p>Price: $1200</p>
+</section>
+
+<section class="tour-item" id="dubai" onclick="bookingConfirmation('egypt')">
+    <h2>Dubai</h2>
+    <img src="dubai.jpg" alt="Dubai">
+    <p>Experience luxury and culture in Dubai with our tailored tours.</p>
+    <p>Trip Duration: 4 days</p>
+    <p>Price: $1500</p>
+
+
+
+<script>
+    function bookingConfirmation(tourName) {
+        var name = prompt("Please enter your name:");
+        var email = prompt("Please enter your email:");
+        var phone = prompt("Please enter your phone number:");
+
+
+        if (name && email && phone) {
+            alert("Thanks for booking, " + name + "! We will confirm your booking for the " + tourName + " tour through email.");
+
+
+            window.location.href = "index.html";
+        } else {
+            alert("Booking canceled. Please fill out all fields.");
+        }
+    }
+</script>
+
+
+
+
+</body>
+</html>

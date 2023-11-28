@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="2.png" type="image/x-icon">
+    <title>Book Your Trip</title>
+    <style>
+       
+        body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url(regbg.jpg); 
+    
+    margin: 0;
+    padding: 0;
+}
+
+header {
+   
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section {
+    margin: 100px;
+    text-align: center;
+    letter-spacing: 3px;
+    
+
+}
+
+.tour-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: rgb(243, 219, 219);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s linear;
+}
+
+.tour-item:hover {
+    transform: scale(1.05);
+}
+
+.tour-item img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tour-item h2 {
+    color: #333;
+    font-size: 50px;
+}
+
+.tour-item p {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.booking-form {
+    text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(245, 245, 245, -0.5); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            backdrop-filter: blur(5px); 
+}
+
+.booking-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.booking-form button {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.booking-form button:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Book Your Trip</h1>
+</header>
+
+<section class="tour-item" id="paris">
+    <h2>Paris</h2>
+    <img src="paris.jpg" alt="Paris">
+    <p>Explore the beauty of Paris with our expert-guided tours.</p>
+    <p>Trip Duration: 5 days</p>
+    <p>Price: $1000</p>
+</section>
+
+<section class="tour-item" id="egypt">
+    <h2>Egypt</h2>
+    <img src="egypt.jpg" alt="Egypt">
+    <p>Discover ancient wonders in Egypt with our expert-guided tours.</p>
+    <p>Trip Duration: 7 days</p>
+    <p>Price: $1200</p>
+</section>
+
+<section class="tour-item" id="dubai">
+    <h2>Dubai</h2>
+    <img src="dubai.jpg" alt="Dubai">
+    <p>Experience luxury and culture in Dubai with our tailored tours.</p>
+    <p>Trip Duration: 4 days</p>
+    <p>Price: $1500</p>
+</section>
+
+<section class="booking-form">
+    <h2>Book Your Tour</h2>
+    <form id="book" onsubmit="bookingform(); return false;">
+    
+        <label for="tour">Select Tour:</label>
+        <select id="tour" name="tour" required>
+            <option value="paris">Paris</option>
+            <option value="egypt">Egypt</option>
+            <option value="dubai">Dubai</option>
+        </select>
+       
+<label for="numPeople">Number of People:</label>
+<select id="numPeople" name="numPeople" required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  
+</select>
+
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Your Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit" >Submit Booking</button>
+    </form>
+</section>
+
+<script>
+    function bookingform() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var tour = document.getElementById("tour").value;
+
+        if (name.trim() === "" || email.trim() === "" || phone.trim() === "") {
+            alert("Please fill out all fields.");
+        } else {
+        
+            alert("Thanks for booking, " + name + "! We will confirm your booking through email.");
+
+            
+            window.location.href = "index.html";
+        }
+    }
+</script>
+
+
+</body>
+</html>

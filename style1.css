@@ -1,0 +1,156 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background: url(background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: scroll;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    text-align: left;
+    margin-bottom: 0%;
+}
+
+nav ul li {
+    display: inline;
+    text-align: center;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+main {
+    padding: 50px;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+}
+
+.welcome {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #200404;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    height: 200px;
+}
+
+.section1,
+.section2,
+.section3 {
+    padding: 30px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.container,
+.container2,
+.container3 {
+    width: 80%; 
+}
+
+.section1 img,
+.section2 img,
+.section3 img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px; 
+}
+
+.about-section,
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container-about,
+.container1 {
+    max-width: 80%; 
+    margin: 0 auto;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.submit {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container,
+    .container2,
+    .container3,
+    .container-about,
+    .container1 {
+        width: 90%; 
+    }
+
+    .section1 img,
+    .section2 img,
+    .section3 img,
+    .about-img {
+        margin-top: 10px; 
+    }
+
+    button {
+        font-size: 20px; 
+    }
+
+    .image {
+        height: 150px; 
+    }
+}
